@@ -13,5 +13,20 @@
     configuration. You can always manually exclude() any configuration that you never want to apply (use excludeName()
     if you don't have access to them). You can also exclude them via the spring.autoconfigure.exclude property. 
     Auto-configuration is always applied after user-defined beans have been registered.
+## 1.3 @Configuration
+   Indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate
+   bean definitions and service requests for those beans at runtime, for example:
+
+    @Configuration
+    public class AppConfig {
+
+        @Bean
+        public MyBean myBean() {
+            // instantiate, configure and return bean ...
+        }
+    }
+### 1.3.1 @ImportResource({"classpath:..."})
+   The @ImportResource annotation is used to import one or more XML configuration files.
+     
     
   
